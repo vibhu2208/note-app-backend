@@ -11,7 +11,7 @@ const config = {
   port: parseInt(process.env.PORT, 10) || 5000,
   
   // Database
-  mongodbUri: process.env.MONGODB_URI || 'mongodb://localhost:27017/ai-notes-app',
+  mongodbUri: process.env.MONGODB_URI || 'mongodb+srv://cluster0.xgtzlsb.mongodb.net/ai-notes-app',
   
   // JWT
   jwtSecret: process.env.JWT_SECRET || 'fallback-secret-change-in-production',
