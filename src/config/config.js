@@ -25,7 +25,9 @@ const config = {
   rateLimitMaxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS, 10) || 100,
   
   // CORS
-  corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+  corsOrigin: process.env.CORS_ORIGIN ? 
+    process.env.CORS_ORIGIN.split(',').map(origin => origin.trim()) : 
+    ['http://localhost:3000', 'https://notes-app-mu-umber.vercel.app'],
   
   // AI Configuration
   openaiApiKey: process.env.OPENAI_API_KEY,
