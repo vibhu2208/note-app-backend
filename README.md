@@ -252,13 +252,15 @@ npm test -- authController.test.js
 ### Database Configuration
 The app supports both local MongoDB and MongoDB Atlas:
 
-```javascript
-// Local MongoDB
+```env
+# Local MongoDB
 MONGODB_URI=mongodb://localhost:27017/ai-notes-app
 
-// MongoDB Atlas
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/ai-notes-app
+# For production, use environment variables or a secrets manager
+# MONGODB_URI=your_mongodb_connection_string_here
 ```
+
+**Security Note:** Never commit actual database credentials to version control. Use environment variables or a secrets management solution in production.
 
 ### AI Service Configuration
 Configure OpenAI integration:
